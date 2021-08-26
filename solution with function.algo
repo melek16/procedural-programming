@@ -1,0 +1,40 @@
+FUNCTION dot_porduct(v1,v2: : ARRAY_OF INTEGER) : integer
+VAR
+lps,i:INTEGER;
+BEGIN
+    lps:=0;
+    IF (v1.length=v2.length) THEN
+        FOR i FROM 0 TO v1.length STEP 1  DO
+            lps:=lps+v1[i]*v2[i]
+        END_FOR
+        write("The dot product is: ",lps)
+    ELSE
+        lps:=1;
+    END_IF
+    RETURN lps ;
+END
+
+
+ALGORITHM Dot product
+VAR
+    ps,n,j:INTEGER;
+    big_arr : ARRAY_OF INTEGER;
+BEGIN
+    REPEAT
+        write("n= ");
+        read(n)
+    UNTIL (n>1)
+
+
+
+    //getting an array of n vector pairs
+
+
+
+    FOR j FROM 0 TO big_arr.length-1 STEP 1  DO
+       ps:=dot_product(big_arr[j][1],big_array[j][2])
+    IF (ps=0) THEN
+    write("Pair number ",j+1," has two orthogonal vectors")
+    END_IF
+    END_FOR
+END
